@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "e0a1c507ee6546ffa299764b5b4b6474821b84fbfd14ab1553e86468c4c52eec"
+build_start_time: [1683095943, 458286046]
+build_end_time: [1683095943, 538600921]
+inputs:
+  "/Users/bin/Desktop/karim/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1683095923, 250005722]
+  "/Users/bin/Desktop/karim/macos/Runner/AppDelegate.swift": !private [1675285506, 0]
+  "/Users/bin/Desktop/karim/macos/Runner/MainFlutterWindow.swift": !private [1675285506, 0]
