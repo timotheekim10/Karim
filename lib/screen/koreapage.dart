@@ -7,31 +7,23 @@ class KOREAPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Korea'),
+        backgroundColor: const Color(0xff5E8ACF),
+        leading: Row(
+          children: [
+            IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: 140,
-            height: 35,
-            margin: const EdgeInsets.only(top: 60, left: 40),
-            decoration: BoxDecoration(
-              color: const Color(0xff5E8ACF),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: const Align(
-              alignment: Alignment.centerLeft,
-              child: Center(
-                child: Text(
-                  'KOREA',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-          ),
           Container(
             child: const Scrollview(),
           ),
