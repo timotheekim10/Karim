@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:karim/screen/tipscreen.dart';
+
 import '../widgets/scrollview.dart';
 
 class KOREAPage extends StatelessWidget {
@@ -119,6 +121,45 @@ class KOREAPage extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(
+            height: 50,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => TipScreen()));
+            },
+            child: Container(
+              width: 300,
+              height: 50,
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: const <BoxShadow>[
+                  BoxShadow(
+                    color: Colors.black54,
+                    blurRadius: 20.0,
+                    spreadRadius: -20.0,
+                    offset: Offset(0.0, 25.0),
+                  ),
+                ],
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Tip!',
+                    style: TextStyle(fontSize: 15),
+                  ),
+                  Text(
+                    'sdadsdads',
+                    style: TextStyle(fontSize: 10),
+                  )
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
