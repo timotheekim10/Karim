@@ -6,11 +6,11 @@ class TipScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF5E8ACF),
+      backgroundColor: const Color(0xFF5E8ACF),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             Text(
               'Tip',
               style: TextStyle(

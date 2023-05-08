@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screen/canadapage.dart';
-import '../screen/francepage.dart';
-import '../screen/germanypage.dart';
-import '../screen/italypage.dart';
-import '../screen/japanpage.dart';
-import '../screen/koreapage.dart';
-import '../screen/ukpage.dart';
-import '../screen/usapage.dart';
+import 'package:karim/screen/category.dart';
 
 class Dropdown extends StatefulWidget {
   const Dropdown({Key? key}) : super(key: key);
@@ -102,47 +95,11 @@ class DropdownState extends State<Dropdown> {
           setState(() {
             dropdownValue = value;
           });
-          if (value == 'JAPAN') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const JapanPage()),
-            );
-          } else if (value == 'USA') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const USAPage()),
-            );
-          } else if (value == 'UK') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const UKPage()),
-            );
-          } else if (value == 'FRANCE') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const FRANCEPage()),
-            );
-          } else if (value == 'GERMANY') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const GERMANYPage()),
-            );
-          } else if (value == 'ITALY') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const ITALYPage()),
-            );
-          } else if (value == 'CANADA') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const CANADAPage()),
-            );
-          } else if (value == 'KOREA') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const KOREAPage()),
-            );
-          }
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => CountryPage(country: value)),
+          );
         },
         icon: const Padding(
           padding: EdgeInsets.only(right: 8),
