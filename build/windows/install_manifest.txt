@@ -1,0 +1,13 @@
+C:/Karim/build/windows/runner/Debug/data/icudtl.dat
+C:/Karim/build/windows/runner/Debug/flutter_windows.dll
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/assets/images/baemin.png
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/assets/images/food.png
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/assets/images/karim.png
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/NOTICES
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Karim/build/windows/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag
