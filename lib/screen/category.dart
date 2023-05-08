@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:karim/screen/tipscreen.dart';
-
 import '../widgets/scrollview.dart';
 
 class CountryPage extends StatelessWidget {
@@ -26,14 +25,10 @@ class CountryPage extends StatelessWidget {
         ),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            child: const Scrollview(),
-          ),
+          const Scrollview(),
           const SizedBox(height: 5),
           Container(
-            margin: const EdgeInsets.only(left: 25),
             width: 350,
             height: 350,
             decoration: const BoxDecoration(

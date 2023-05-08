@@ -13,7 +13,7 @@ class _ScrollviewState extends State<Scrollview> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
+      margin: const EdgeInsets.only(left: 20, right: 20, bottom: 5),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
