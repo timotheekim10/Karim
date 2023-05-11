@@ -13,9 +13,15 @@ class DropdownState extends State<Dropdown> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 340,
+    return Container(
+      padding: const EdgeInsets.only(left: 16, right: 16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+      ),
+      width: 350,
       child: DropdownButton<String>(
+        dropdownColor: Colors.white,
         value: dropdownValue,
         items: [
           DropdownMenuItem(
@@ -102,7 +108,7 @@ class DropdownState extends State<Dropdown> {
           );
         },
         icon: const Padding(
-          padding: EdgeInsets.only(right: 8),
+          padding: EdgeInsets.only(left: 1, right: 1),
           child: Icon(Icons.arrow_drop_down),
         ),
         iconSize: 24,
