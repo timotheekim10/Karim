@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:karim/data/color_list.dart';
 import 'package:karim/screens/tipscreen.dart';
-
+import '../data/color_list.dart';
 import '../widgets/scrollview.dart';
 
 class CountryPage extends StatelessWidget {

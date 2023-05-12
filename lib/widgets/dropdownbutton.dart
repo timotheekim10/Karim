@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:karim/screens/category.dart';
+import '../screens/category.dart';
 
 class Dropdown extends StatefulWidget {
   const Dropdown({Key? key}) : super(key: key);
