@@ -8,7 +8,7 @@ class Scrollview extends StatefulWidget {
 }
 
 class ScrollviewState extends State<Scrollview> {
-  String _selectedButton = "Food"; // 선택된 버튼의 텍스트를 저장할 변수
+  String selectedButton = "Food"; // 선택된 버튼의 텍스트를 저장할 변수
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +21,13 @@ class ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton = "Food"; // Food 버튼이 선택됐을 때 변수 값 변경
+                  selectedButton = "Food"; // Food 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
                 "Food",
                 style: TextStyle(
-                  color: _selectedButton == "Food"
+                  color: selectedButton == "Food"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),
@@ -37,13 +37,13 @@ class ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton = "Trip"; // Trip 버튼이 선택됐을 때 변수 값 변경
+                  selectedButton = "Trip"; // Trip 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
                 "Trip",
                 style: TextStyle(
-                  color: _selectedButton == "Trip"
+                  color: selectedButton == "Trip"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),
@@ -53,13 +53,13 @@ class ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton = "Shopping"; // Shopping 버튼이 선택됐을 때 변수 값 변경
+                  selectedButton = "Shopping"; // Shopping 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
                 "Shopping",
                 style: TextStyle(
-                  color: _selectedButton == "Shopping"
+                  color: selectedButton == "Shopping"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),
@@ -69,13 +69,13 @@ class ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton = "Financial"; // Financial 버튼이 선택됐을 때 변수 값 변경
+                  selectedButton = "Financial"; // Financial 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
                 "Financial",
                 style: TextStyle(
-                  color: _selectedButton == "Financial"
+                  color: selectedButton == "Financial"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),
@@ -85,13 +85,13 @@ class ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton = "SNS"; // Financial 버튼이 선택됐을 때 변수 값 변경
+                  selectedButton = "SNS"; // Financial 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
                 "SNS",
                 style: TextStyle(
-                  color: _selectedButton == "SNS"
+                  color: selectedButton == "SNS"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),
@@ -101,13 +101,13 @@ class ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton = "Game"; // Financial 버튼이 선택됐을 때 변수 값 변경
+                  selectedButton = "Game"; // Financial 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
                 "Game",
                 style: TextStyle(
-                  color: _selectedButton == "Game"
+                  color: selectedButton == "Game"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),
