@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-2023/05/12-12:45:09.452 5203 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.KDju3v/flutter_tools_chrome_device.CyI0ml/Default/Local Storage/leveldb/MANIFEST-000001
-2023/05/12-12:45:09.453 5203 Recovering log #3
-2023/05/12-12:45:09.453 5203 Reusing old log /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.KDju3v/flutter_tools_chrome_device.CyI0ml/Default/Local Storage/leveldb/000003.log 
-=======
-2023/05/12-12:43:37.272 c60 Reusing MANIFEST C:\Users\Bieber\AppData\Local\Temp\flutter_tools.8717297a\flutter_tools_chrome_device.1481b118\Default\Local Storage\leveldb/MANIFEST-000001
-2023/05/12-12:43:37.273 c60 Recovering log #3
-2023/05/12-12:43:37.275 c60 Reusing old log C:\Users\Bieber\AppData\Local\Temp\flutter_tools.8717297a\flutter_tools_chrome_device.1481b118\Default\Local Storage\leveldb/000003.log 
->>>>>>> master
+2023/05/15-19:38:36.155 34f0 Reusing MANIFEST C:\Users\주성찬\AppData\Local\Temp\flutter_tools.1c61b013\flutter_tools_chrome_device.82b93cac\Default\Local Storage\leveldb/MANIFEST-000001
+2023/05/15-19:38:36.157 34f0 Recovering log #3
+2023/05/15-19:38:36.166 34f0 Reusing old log C:\Users\주성찬\AppData\Local\Temp\flutter_tools.1c61b013\flutter_tools_chrome_device.82b93cac\Default\Local Storage\leveldb/000003.log 
