@@ -4,10 +4,10 @@ class Scrollview extends StatefulWidget {
   const Scrollview({Key? key}) : super(key: key);
 
   @override
-  _ScrollviewState createState() => _ScrollviewState();
+  ScrollviewState createState() => ScrollviewState();
 }
 
-class _ScrollviewState extends State<Scrollview> {
+class ScrollviewState extends State<Scrollview> {
   String _selectedButton = "Food"; // 선택된 버튼의 텍스트를 저장할 변수
 
   @override
@@ -69,14 +69,13 @@ class _ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton =
-                      "Navigation"; // Navigation 버튼이 선택됐을 때 변수 값 변경
+                  _selectedButton = "Financial"; // Financial 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
-                "Navigation",
+                "Financial",
                 style: TextStyle(
-                  color: _selectedButton == "Navigation"
+                  color: _selectedButton == "Financial"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),
@@ -86,13 +85,29 @@ class _ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton = "Financial"; // Financial 버튼이 선택됐을 때 변수 값 변경
+                  _selectedButton = "SNS"; // Financial 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
-                "Financial",
+                "SNS",
                 style: TextStyle(
-                  color: _selectedButton == "Financial"
+                  color: _selectedButton == "SNS"
+                      ? Colors.black
+                      : Colors.grey, // 선택 여부에 따라 색 변경
+                ),
+              ),
+            ),
+            const SizedBox(width: 10),
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  _selectedButton = "Game"; // Financial 버튼이 선택됐을 때 변수 값 변경
+                });
+              },
+              child: Text(
+                "Game",
+                style: TextStyle(
+                  color: _selectedButton == "Game"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),

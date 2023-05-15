@@ -20,8 +20,8 @@ class RecommendedApps extends StatelessWidget {
             ),
           ],
         ),
-        width: 160,
-        height: 120,
+        width: 140,
+        height: 90,
         child: Column(
           children: [
             Flexible(
@@ -44,7 +44,7 @@ class RecommendedApps extends StatelessWidget {
                     child: Container(
                       color: Colors.transparent,
                       alignment: Alignment.center,
-                      child: Text('${ranking}위 이름'),
+                      child: Text('$ranking위 이름'),
                     ),
                   ),
                 ],
@@ -55,7 +55,7 @@ class RecommendedApps extends StatelessWidget {
               child: Container(
                 color: Colors.transparent,
                 alignment: Alignment.center,
-                child: Text('${ranking}위 설명'),
+                child: Text('$ranking위 설명'),
               ),
             ),
           ],

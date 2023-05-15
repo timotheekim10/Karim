@@ -86,42 +86,11 @@ class CountryPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(
-                  bottom: 70,
-                  right: 55,
-                  child: Container(
-                    width: 100,
-                    height: 40,
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
-                        color: Color(0xffF5F5F5)),
-                  ),
-                ),
-                Positioned(
-                  bottom: 82,
-                  right: 78,
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.star,
-                        color: Colors.yellow[700],
-                      ),
-                      const SizedBox(width: 5),
-                      const Text(
-                        "4.8",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ),
           ),
           const SizedBox(
-            height: 50,
+            height: 15,
           ),
           GestureDetector(
             onTap: () {
@@ -160,7 +129,7 @@ class CountryPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 25,
+            height: 20,
           ),
           Container(
               width: 300,
