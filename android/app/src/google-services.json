@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "901980869181",
+    "project_id": "karim-data",
+    "storage_bucket": "karim-data.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901980869181:android:2409691fc7c3170a705054",
+        "android_client_info": {
+          "package_name": "com.example.karim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901980869181-34gop3rj32jfaiql3p7ahdfglp89osin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9EboOyATPo0feaRYblgrIVI9h7m2Jmvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901980869181-34gop3rj32jfaiql3p7ahdfglp89osin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
