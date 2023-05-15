@@ -4,17 +4,22 @@ import '../data/color_list.dart';
 import 'package:karim/widgets/recommended_apps.dart';
 import '../widgets/scrollview.dart';
 
-class CountryPage extends StatelessWidget {
+class CountryPage extends StatefulWidget {
   final String? country;
 
   const CountryPage({Key? key, this.country}) : super(key: key);
 
   @override
+  State<CountryPage> createState() => _CountryPageState();
+}
+
+class _CountryPageState extends State<CountryPage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(country ?? ''),
-        backgroundColor: color_list[country],
+        title: Text(widget.country ?? ''),
+        backgroundColor: color_list[widget.country],
         leading: Row(
           children: [
             IconButton(
@@ -41,19 +46,19 @@ class CountryPage extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  bottom: 20,
+                  bottom: 30,
                   left: 25,
                   child: Container(
                     width: 300,
-                    height: 70,
+                    height: 100,
                     decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(40)),
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
                       color: Colors.white,
                     ),
                   ),
                 ),
                 Positioned(
-                  bottom: 30,
+                  bottom: 55,
                   left: 55,
                   child: Container(
                     width: 50,
@@ -66,7 +71,7 @@ class CountryPage extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                  bottom: 55,
+                  bottom: 85,
                   left: 120,
                   child: Text(
                     "BAEMIN",
@@ -75,10 +80,10 @@ class CountryPage extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                  bottom: 35,
+                  bottom: 65,
                   left: 120,
                   child: Text(
-                    "Korea's No. 1 delivery app!",
+                    "Korea's No. 1 delivery app!", //api
                     style: TextStyle(
                       color: Color(0xffA8A6A6),
                       fontSize: 14,
@@ -98,8 +103,8 @@ class CountryPage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const TipScreen()));
             },
             child: Container(
-              width: 300,
-              height: 50,
+              width: 320,
+              height: 80,
               padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -111,18 +116,25 @@ class CountryPage extends StatelessWidget {
                     offset: Offset(0.0, 25.0),
                   ),
                 ],
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(25),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  Text(
-                    'Tip!',
-                    style: TextStyle(fontSize: 15),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Tip!',
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
                   ),
-                  Text(
-                    'sdadsdads',
-                    style: TextStyle(fontSize: 10),
+                  Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      'sdadsdads',
+                      style: TextStyle(fontSize: 10),
+                    ),
                   )
                 ],
               ),
@@ -146,7 +158,7 @@ class CountryPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
-                      color: color_list[country],
+                      color: color_list[widget.country],
                     ),
                   ),
                   Text(
@@ -154,11 +166,11 @@ class CountryPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
-                      color: color_list[country],
+                      color: color_list[widget.country],
                     ),
                   ),
                 ],
-              )),
+              )), //api
           const SizedBox(
             height: 10,
           ),
