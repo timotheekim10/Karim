@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 2023/05/12-12:45:10.063 15203 Creating DB /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.KDju3v/flutter_tools_chrome_device.CyI0ml/Default/Service Worker/Database since it was missing.
 2023/05/12-12:45:10.083 15203 Reusing MANIFEST /private/var/folders/89/zwz_rfxx3jb9p78g_ymmh78h0000gn/T/flutter_tools.KDju3v/flutter_tools_chrome_device.CyI0ml/Default/Service Worker/Database/MANIFEST-000001
+=======
+2023/05/12-12:32:11.367 16a0 Creating DB C:\Users\Bieber\AppData\Local\Temp\flutter_tools.6f59680e\flutter_tools_chrome_device.66d55dd3\Default\Service Worker\Database since it was missing.
+2023/05/12-12:32:11.370 16a0 Reusing MANIFEST C:\Users\Bieber\AppData\Local\Temp\flutter_tools.6f59680e\flutter_tools_chrome_device.66d55dd3\Default\Service Worker\Database/MANIFEST-000001
+>>>>>>> master

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:karim/screens/tipscreen.dart';
+<<<<<<< HEAD
 import '../data/color_list.dart';
+=======
+import 'package:karim/widgets/recommended_apps.dart';
+
+>>>>>>> master
 import '../widgets/scrollview.dart';
 
 class CountryPage extends StatelessWidget {
@@ -157,7 +162,58 @@ class CountryPage extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          Container(
+              width: 300,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Top 4',
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: color_list[country],
+                    ),
+                  ),
+                  Text(
+                    ' in',
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                      color: color_list[country],
+                    ),
+                  ),
+                ],
+              )),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RecommendedApps(ranking: 1),
+              SizedBox(width: 25),
+              RecommendedApps(ranking: 2),
+            ],
+          ),
+          SizedBox(height: 25),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RecommendedApps(ranking: 3),
+              SizedBox(width: 25),
+              RecommendedApps(ranking: 4),
+            ],
+          ),
         ],
       ),
     );
