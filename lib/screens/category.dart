@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:karim/screens/tipscreen.dart';
-<<<<<<< HEAD
 import '../data/color_list.dart';
-=======
 import 'package:karim/widgets/recommended_apps.dart';
-
->>>>>>> master
 import '../widgets/scrollview.dart';
 
 class CountryPage extends StatelessWidget {
@@ -163,7 +159,7 @@ class CountryPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Container(
@@ -194,21 +190,21 @@ class CountryPage extends StatelessWidget {
                   ),
                 ],
               )),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               RecommendedApps(ranking: 1),
               SizedBox(width: 25),
               RecommendedApps(ranking: 2),
             ],
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               RecommendedApps(ranking: 3),
               SizedBox(width: 25),
               RecommendedApps(ranking: 4),
