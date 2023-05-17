@@ -18,6 +18,7 @@ class DropdownState extends State<Dropdown> {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
+        border: Border.all(color: Colors.orange, width: 2),
       ),
       width: 350,
       child: DropdownButton<String>(
