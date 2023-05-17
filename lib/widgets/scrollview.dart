@@ -22,6 +22,7 @@ class ScrollviewState extends State<Scrollview> {
   String selectedButton = "Food";
   List<String> carouselImages = [
     'assets/images/baemin.png',
+    'assets/images/baemin.png',
   ];
   List<String> carouselTitles = [
     "BAEMIN",
