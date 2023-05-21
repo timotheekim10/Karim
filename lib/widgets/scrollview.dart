@@ -4,16 +4,16 @@ class Scrollview extends StatefulWidget {
   const Scrollview({Key? key}) : super(key: key);
 
   @override
-  _ScrollviewState createState() => _ScrollviewState();
+  ScrollviewState createState() => ScrollviewState();
 }
 
-class _ScrollviewState extends State<Scrollview> {
-  String _selectedButton = "Food"; // 선택된 버튼의 텍스트를 저장할 변수
+class ScrollviewState extends State<Scrollview> {
+  String selectedButton = "Food"; // 선택된 버튼의 텍스트를 저장할 변수
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
+      margin: const EdgeInsets.only(left: 20, right: 20, bottom: 5),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -21,13 +21,13 @@ class _ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton = "Food"; // Food 버튼이 선택됐을 때 변수 값 변경
+                  selectedButton = "Food"; // Food 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
                 "Food",
                 style: TextStyle(
-                  color: _selectedButton == "Food"
+                  color: selectedButton == "Food"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),
@@ -37,13 +37,13 @@ class _ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton = "Trip"; // Trip 버튼이 선택됐을 때 변수 값 변경
+                  selectedButton = "Trip"; // Trip 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
                 "Trip",
                 style: TextStyle(
-                  color: _selectedButton == "Trip"
+                  color: selectedButton == "Trip"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),
@@ -53,13 +53,13 @@ class _ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton = "Shopping"; // Shopping 버튼이 선택됐을 때 변수 값 변경
+                  selectedButton = "Shopping"; // Shopping 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
                 "Shopping",
                 style: TextStyle(
-                  color: _selectedButton == "Shopping"
+                  color: selectedButton == "Shopping"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),
@@ -69,30 +69,45 @@ class _ScrollviewState extends State<Scrollview> {
             TextButton(
               onPressed: () {
                 setState(() {
-                  _selectedButton =
-                      "Navigation"; // Navigation 버튼이 선택됐을 때 변수 값 변경
-                });
-              },
-              child: Text(
-                "Navigation",
-                style: TextStyle(
-                  color: _selectedButton == "Navigation"
-                      ? Colors.black
-                      : Colors.grey, // 선택 여부에 따라 색 변경
-                ),
-              ),
-            ),
-            const SizedBox(width: 10),
-            TextButton(
-              onPressed: () {
-                setState(() {
-                  _selectedButton = "Financial"; // Financial 버튼이 선택됐을 때 변수 값 변경
+                  selectedButton = "Financial"; // Financial 버튼이 선택됐을 때 변수 값 변경
                 });
               },
               child: Text(
                 "Financial",
                 style: TextStyle(
-                  color: _selectedButton == "Financial"
+                  color: selectedButton == "Financial"
+                      ? Colors.black
+                      : Colors.grey, // 선택 여부에 따라 색 변경
+                ),
+              ),
+            ),
+            const SizedBox(width: 10),
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  selectedButton = "SNS"; // Financial 버튼이 선택됐을 때 변수 값 변경
+                });
+              },
+              child: Text(
+                "SNS",
+                style: TextStyle(
+                  color: selectedButton == "SNS"
+                      ? Colors.black
+                      : Colors.grey, // 선택 여부에 따라 색 변경
+                ),
+              ),
+            ),
+            const SizedBox(width: 10),
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  selectedButton = "Game"; // Financial 버튼이 선택됐을 때 변수 값 변경
+                });
+              },
+              child: Text(
+                "Game",
+                style: TextStyle(
+                  color: selectedButton == "Game"
                       ? Colors.black
                       : Colors.grey, // 선택 여부에 따라 색 변경
                 ),

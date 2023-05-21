@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screen/canadapage.dart';
-import '../screen/francepage.dart';
-import '../screen/germanypage.dart';
-import '../screen/italypage.dart';
-import '../screen/japanpage.dart';
-import '../screen/koreapage.dart';
-import '../screen/ukpage.dart';
-import '../screen/usapage.dart';
+import '../screens/category.dart';
 
 class Dropdown extends StatefulWidget {
   const Dropdown({Key? key}) : super(key: key);
@@ -20,9 +13,15 @@ class DropdownState extends State<Dropdown> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 340,
+    return Container(
+      padding: const EdgeInsets.only(left: 16, right: 16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+      ),
+      width: 350,
       child: DropdownButton<String>(
+        dropdownColor: Colors.white,
         value: dropdownValue,
         items: [
           DropdownMenuItem(
@@ -102,50 +101,14 @@ class DropdownState extends State<Dropdown> {
           setState(() {
             dropdownValue = value;
           });
-          if (value == 'JAPAN') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const JapanPage()),
-            );
-          } else if (value == 'USA') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const USAPage()),
-            );
-          } else if (value == 'UK') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const UKPage()),
-            );
-          } else if (value == 'FRANCE') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const FRANCEPage()),
-            );
-          } else if (value == 'GERMANY') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const GERMANYPage()),
-            );
-          } else if (value == 'ITALY') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const ITALYPage()),
-            );
-          } else if (value == 'CANADA') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const CANADAPage()),
-            );
-          } else if (value == 'KOREA') {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const KOREAPage()),
-            );
-          }
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => CountryPage(country: value)),
+          );
         },
         icon: const Padding(
-          padding: EdgeInsets.only(right: 8),
+          padding: EdgeInsets.only(left: 1, right: 1),
           child: Icon(Icons.arrow_drop_down),
         ),
         iconSize: 24,

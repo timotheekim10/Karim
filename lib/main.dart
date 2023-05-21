@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             ),
             const Positioned(
               top: 70,
-              left: 20,
+              left: 33,
               right: 0,
               child: Text(
                 'Where are you Traveling?',
@@ -34,19 +34,6 @@ class MyApp extends StatelessWidget {
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                ),
-              ),
-            ),
-            Positioned(
-              top: 170,
-              left: 20,
-              child: Container(
-                width: 380,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  border: Border.all(color: Colors.orange, width: 3),
                 ),
               ),
             ),
