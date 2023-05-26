@@ -1,7 +1,8 @@
-2023/05/15-19:34:42.814 593c Reusing MANIFEST C:\Users\주성찬\AppData\Local\Temp\flutter_tools.10cd58d0\flutter_tools_chrome_device.96efd8cb\Default\Site Characteristics Database/MANIFEST-000001
-2023/05/15-19:34:42.815 593c Recovering log #3
-2023/05/15-19:34:42.815 593c Level-0 table #6: started
-2023/05/15-19:34:42.817 593c Level-0 table #6: 219 bytes OK
-2023/05/15-19:34:42.817 593c Recovering log #6
-2023/05/15-19:34:42.818 593c Reusing old log C:\Users\주성찬\AppData\Local\Temp\flutter_tools.10cd58d0\flutter_tools_chrome_device.96efd8cb\Default\Site Characteristics Database/000006.log 
-2023/05/15-19:34:42.820 593c Delete type=0 #3
+2023/05/19-17:20:29.831 da4 Reusing MANIFEST C:\Users\주성찬\AppData\Local\Temp\flutter_tools.89364f27\flutter_tools_chrome_device.1e47a46b\Default\Site Characteristics Database/MANIFEST-000001
+2023/05/19-17:20:29.832 da4 Recovering log #10
+2023/05/19-17:20:29.832 da4 Reusing old log C:\Users\주성찬\AppData\Local\Temp\flutter_tools.89364f27\flutter_tools_chrome_device.1e47a46b\Default\Site Characteristics Database/000010.log 
+2023/05/19-17:20:29.833 da4 Delete type=0 #3
+2023/05/19-17:20:29.833 da4 Delete type=2 #4
+2023/05/19-17:20:29.833 da4 Delete type=2 #6
+2023/05/19-17:20:29.833 da4 Delete type=0 #6
+2023/05/19-17:20:29.833 da4 Delete type=2 #7

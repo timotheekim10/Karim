@@ -1,0 +1,22 @@
+import requests
+
+url = "https://api.data.ai/v1.3/apps/ios/app/1403455040/ranks"
+params = {
+    "start_date": "2018-07-22",
+    "end_date": "2018-08-01",
+    "interval": "daily",
+    "countries": "US",
+    "category": "Overall",
+    "feed": "free"
+}
+headers = {
+    "Authorization": "Bearer 9e473d79c22f082b9c075fa8507f04bb4c72a2eb"
+}
+
+response = requests.get(url, params=params, headers=headers)
+
+if response.status_code == 200:
+    data = response.json()
+    # 데이터 처리 로직 작성
+else:
+    print("API 요청이 실패하였습니다. 상태 코드:", response.status_code)

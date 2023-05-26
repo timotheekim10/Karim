@@ -3,6 +3,7 @@ import 'package:karim/screens/tipscreen.dart';
 import '../data/color_list.dart';
 import 'package:karim/widgets/recommended_apps.dart';
 import '../widgets/scrollview.dart';
+import 'package:http/http.dart' as http;
 
 class CountryPage extends StatelessWidget {
   final String? country;
@@ -182,5 +183,12 @@ class CountryPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void fetchUsers() {
+    print('fetchUsers called');
+    final url = '';
+    final uri = Uri.parse(url);
+    http.get(uri);
   }
 }
