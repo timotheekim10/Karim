@@ -65,9 +65,16 @@ class ScrollviewState extends State<Scrollview> {
         _currentPage = 0;
       }
       _pageController.nextPage(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 350),
         curve: Curves.easeInOut,
       );
+
+      if (_currentPage == carouselImages.length - 1) {
+        Future.delayed(const Duration(seconds: 4), () {
+          _currentPage = 0;
+          _pageController.jumpToPage(0);
+        });
+      }
     });
   }
 
