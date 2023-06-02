@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:karim/widgets/dropdownbutton.dart';
+import 'package:karim/widgets/scrollview.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,39 +12,58 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        resizeToAvoidBottomInset: false,
-        body: Stack(
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/karim.png'),
+    return ChangeNotifierProvider(
+      create: (context) => SelectedButtonProvider(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          resizeToAvoidBottomInset: false,
+          body: Stack(
+            children: const [
+              BackgroundImage(),
+              Positioned(
+                top: 70,
+                left: 33,
+                right: 0,
+                child: Text(
+                  'Where are you Traveling?',
+                  style: TextStyle(
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-            ),
-            const Positioned(
-              top: 70,
-              left: 33,
-              right: 0,
-              child: Text(
-                'Where are you Traveling?',
-                style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+              Positioned(
+                top: 170,
+                right: 50,
+                child: Dropdown(),
               ),
-            ),
-            const Positioned(
-              top: 170,
-              right: 50,
-              child: Dropdown(),
-            ),
-          ],
+              Positioned(
+                top: 250,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                child: CustomScrollView(), // 수정된 부분
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class BackgroundImage extends StatelessWidget {
+  const BackgroundImage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage('assets/images/karim.png'),
         ),
       ),
     );

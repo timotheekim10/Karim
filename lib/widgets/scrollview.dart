@@ -1,6 +1,18 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+class SelectedButtonProvider extends ChangeNotifier {
+  String _selectedButton = "Food";
+
+  String get selectedButton => _selectedButton;
+
+  set selectedButton(String button) {
+    _selectedButton = button;
+    notifyListeners();
+  }
+}
 
 class Scrollview extends StatefulWidget {
   const Scrollview({Key? key}) : super(key: key);
@@ -19,7 +31,6 @@ class ScrollviewState extends State<Scrollview> {
     "Game",
   ];
 
-  String selectedButton = "Food";
   List<String> carouselImages = [
     'assets/images/baemin.png',
     'assets/images/baemin.png',
@@ -31,7 +42,7 @@ class ScrollviewState extends State<Scrollview> {
     "Title 5",
     "Title 6",
   ];
-  List<String> carousesublTitles = [
+  List<String> carouselSubTitles = [
     "Korea's No. 1 delivery app!",
     "Title 3",
     "Title 4",
@@ -80,6 +91,9 @@ class ScrollviewState extends State<Scrollview> {
 
   @override
   Widget build(BuildContext context) {
+    final selectedButtonProvider = Provider.of<SelectedButtonProvider>(context);
+    final selectedButton = selectedButtonProvider.selectedButton;
+
     return Column(
       children: [
         Container(
@@ -93,9 +107,7 @@ class ScrollviewState extends State<Scrollview> {
                     padding: const EdgeInsets.only(right: 10),
                     child: TextButton(
                       onPressed: () {
-                        setState(() {
-                          selectedButton = button;
-                        });
+                        selectedButtonProvider.selectedButton = button;
                       },
                       child: Text(
                         button,
@@ -181,7 +193,7 @@ class ScrollviewState extends State<Scrollview> {
                       bottom: 65,
                       left: 120,
                       child: Text(
-                        carousesublTitles[index],
+                        carouselSubTitles[index],
                         style: const TextStyle(
                           color: Color(0xffA8A6A6),
                           fontSize: 14,
