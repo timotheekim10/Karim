@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
 class RecommendedApps extends StatelessWidget {
-  const RecommendedApps({Key? key, required this.ranking}) : super(key: key);
+  const RecommendedApps(
+      {Key? key,
+      required this.country,
+      required this.category,
+      required this.ranking})
+      : super(key: key);
+
   final int ranking;
+  final String? country;
+  final String? category;
 
   @override
   Widget build(BuildContext context) {

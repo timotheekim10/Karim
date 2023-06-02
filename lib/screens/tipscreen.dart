@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class TipScreen extends StatelessWidget {
-  const TipScreen({Key? key}) : super(key: key);
+  const TipScreen({Key? key, required this.country, required this.category})
+      : super(key: key);
+
+  final String? country;
+  final String? category;
 
   @override
   Widget build(BuildContext context) {
@@ -10,8 +14,8 @@ class TipScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
+          children: [
+            const Text(
               'Tip',
               style: TextStyle(
                 color: Colors.white,
@@ -19,8 +23,8 @@ class TipScreen extends StatelessWidget {
               ),
             ),
             Text(
-              'dasdadsadasdadsada',
-              style: TextStyle(
+              '$country $category',
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 20,
               ),
