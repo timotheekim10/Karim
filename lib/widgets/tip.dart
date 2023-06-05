@@ -53,6 +53,7 @@ class Tip extends StatelessWidget {
                 ],
                 borderRadius: BorderRadius.circular(25),
               ),
+<<<<<<< HEAD
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -72,6 +73,14 @@ class Tip extends StatelessWidget {
                     ),
                   ),
                 ],
+=======
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: Text(
+                '$category',
+                style: const TextStyle(fontSize: 10),
+>>>>>>> master
               ),
             ),
           );

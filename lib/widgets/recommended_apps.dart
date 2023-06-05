@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:karim/widgets/recommended_details.dart';
 
 class RecommendedApps extends StatelessWidget {
-  const RecommendedApps(
-      {Key? key,
-      required this.country,
-      required this.category,
-      required this.ranking})
-      : super(key: key);
+  const RecommendedApps({
+    Key? key,
+    required this.country,
+    required this.category,
+    required this.ranking,
+  }) : super(key: key);
 
   final int ranking;
   final String? country;
@@ -15,6 +16,18 @@ class RecommendedApps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => RecommendedAppDetails(
+              country: country,
+              category: category,
+              ranking: ranking,
+            ),
+          ),
+        );
+      },
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
