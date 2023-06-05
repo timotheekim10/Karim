@@ -46,10 +46,10 @@ class Tip extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 8.0),
+              padding: const EdgeInsets.only(left: 8.0),
               child: Text(
                 '$category',
-                style: TextStyle(fontSize: 10),
+                style: const TextStyle(fontSize: 10),
               ),
             )
           ],
