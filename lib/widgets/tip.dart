@@ -51,32 +51,12 @@ class Tip extends StatelessWidget {
                 ],
                 borderRadius: BorderRadius.circular(25),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      'Tip!',
-                      style:
-                          TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      '$SummaryTipText',
-                      style: TextStyle(fontSize: 15),
-                    ),
-                  ),
-                ],
-              ),
             ),
           );
         } else if (snapshot.hasError) {
           return Text("Error: ${snapshot.error}");
         } else {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         }
       },
     );

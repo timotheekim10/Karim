@@ -4,7 +4,6 @@ import 'package:karim/screens/manual.dart';
 import 'package:karim/widgets/dropdownbutton.dart';
 import 'package:karim/widgets/scrollview.dart';
 import 'package:provider/provider.dart';
-
 import 'firebase_options.dart';
 
 Future<void> main() async {

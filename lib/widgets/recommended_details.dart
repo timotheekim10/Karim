@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class RecommendedAppDetails extends StatefulWidget {
   final String? country;
@@ -17,6 +18,20 @@ class RecommendedAppDetails extends StatefulWidget {
 }
 
 class _RecommendedAppDetailsState extends State<RecommendedAppDetails> {
+  void _launchYouTubeSearch(String searchQuery) async {
+    String url =
+        'https://www.youtube.com/results?search_query=${Uri.encodeComponent(searchQuery)}';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Could not launch YouTube search.'),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,12 +66,14 @@ class _RecommendedAppDetailsState extends State<RecommendedAppDetails> {
                     ),
                     const SizedBox(height: 50),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        _launchYouTubeSearch('appname');
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                       ),
                       child: const Text(
-                        'Manual',
+                        'YouTube',
                         style: TextStyle(
                           color: Colors.black,
                         ),
