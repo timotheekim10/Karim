@@ -24,7 +24,7 @@ class Tip extends StatelessWidget {
           final random = Random();
           final randomIndex = random.nextInt(tipList.length);
           final randomTipText = tipList[randomIndex];
-          final SummaryTipText = randomTipText.substring(0, 30);
+          final SummaryTipText = randomTipText.substring(0, 43);
 
           return GestureDetector(
             onTap: () {
