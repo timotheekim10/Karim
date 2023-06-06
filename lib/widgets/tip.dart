@@ -37,7 +37,7 @@ class Tip extends StatelessWidget {
             },
             child: Container(
               width: 320,
-              height: 80,
+              height: 90,
               padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: Colors.white,
