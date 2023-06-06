@@ -2,15 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class RecommendedAppDetails extends StatefulWidget {
-  final String? country;
-  final String? category;
-  final int ranking;
+  final String? productName;
 
   const RecommendedAppDetails({
     Key? key,
-    this.country,
-    this.category,
-    required this.ranking,
+    required this.productName,
   }) : super(key: key);
 
   @override

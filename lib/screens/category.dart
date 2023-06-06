@@ -84,13 +84,13 @@ class _CountryPageState extends State<CountryPage> {
               RecommendedApps(
                 country: widget.country,
                 category: selectedButton,
-                ranking: 1,
+                ranking: 0,
               ),
               const SizedBox(width: 25),
               RecommendedApps(
                   country: widget.country,
                   category: selectedButton,
-                  ranking: 2),
+                  ranking: 1),
             ],
           ),
           const SizedBox(height: 25),
@@ -100,12 +100,12 @@ class _CountryPageState extends State<CountryPage> {
               RecommendedApps(
                   country: widget.country,
                   category: selectedButton,
-                  ranking: 3),
+                  ranking: 2),
               const SizedBox(width: 25),
               RecommendedApps(
                   country: widget.country,
                   category: selectedButton,
-                  ranking: 4),
+                  ranking: 3),
             ],
           ),
         ],

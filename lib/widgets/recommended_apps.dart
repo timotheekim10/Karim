@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:karim/widgets/recommended_details.dart';
 
@@ -16,14 +17,18 @@ class RecommendedApps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
+      onTap: () async {
+        final snapshot = await FirebaseFirestore.instance
+            .collection('Info')
+            .doc(country)
+            .get();
+        final data = snapshot.data() as Map<String, dynamic>;
+        final productName = data[category][ranking]['product_name'];
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) => RecommendedAppDetails(
-              country: country,
-              category: category,
-              ranking: ranking,
+              productName: productName,
             ),
           ),
         );
@@ -43,43 +48,58 @@ class RecommendedApps extends StatelessWidget {
         ),
         width: 140,
         height: 90,
-        child: Column(
-          children: [
-            Flexible(
-              flex: 2,
-              child: Row(
+        child: FutureBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+          future:
+              FirebaseFirestore.instance.collection('Info').doc(country).get(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              final data = snapshot.data!.data()!;
+              final productName = data[category][ranking]['product_name'];
+              final ratings = data[category][ranking]['ratings'];
+              return Column(
                 children: [
                   Flexible(
-                    flex: 4,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      width: 80,
-                      height: 80,
+                    flex: 2,
+                    child: Row(
+                      children: [
+                        Flexible(
+                          flex: 4,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            width: 80,
+                            height: 80,
+                          ),
+                        ),
+                        Flexible(
+                          flex: 5,
+                          child: Container(
+                            color: Colors.transparent,
+                            alignment: Alignment.center,
+                            child: Text('$productName'),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Flexible(
-                    flex: 5,
+                    flex: 1,
                     child: Container(
                       color: Colors.transparent,
                       alignment: Alignment.center,
-                      child: Text('$ranking위 이름'),
+                      child: Text('$ratings/5'),
                     ),
                   ),
                 ],
-              ),
-            ),
-            Flexible(
-              flex: 1,
-              child: Container(
-                color: Colors.transparent,
-                alignment: Alignment.center,
-                child: Text('$ranking위 설명'),
-              ),
-            ),
-          ],
+              );
+            } else if (snapshot.hasError) {
+              return Text('Error: ${snapshot.error}');
+            } else {
+              return Center(child: CircularProgressIndicator());
+            }
+          },
         ),
       ),
     );
