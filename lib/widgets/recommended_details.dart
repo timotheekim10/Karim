@@ -63,7 +63,7 @@ class _RecommendedAppDetailsState extends State<RecommendedAppDetails> {
                     const SizedBox(height: 50),
                     ElevatedButton(
                       onPressed: () {
-                        _launchYouTubeSearch('appname');
+                        _launchYouTubeSearch(widget.productName!); // 수정된 부분
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
