@@ -23,17 +23,15 @@ class Tip extends StatelessWidget {
               snapshot.data!.get(category as Object) as List<dynamic>;
           final random = Random();
           final randomIndex = random.nextInt(tipList.length);
-          final randomCategory = tipList[randomIndex];
+          final randomTipText = tipList[randomIndex];
+          final SummaryTipText = randomTipText.substring(0, 30);
 
           return GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => TipScreen(
-                    country: country,
-                    category: randomCategory,
-                  ),
+                  builder: (context) => TipScreen(randomTipText: randomTipText),
                 ),
               );
             },
@@ -61,14 +59,14 @@ class Tip extends StatelessWidget {
                     child: Text(
                       'Tip!',
                       style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 8.0),
                     child: Text(
-                      '$randomCategory',
-                      style: TextStyle(fontSize: 10),
+                      '$SummaryTipText',
+                      style: TextStyle(fontSize: 15),
                     ),
                   ),
                 ],

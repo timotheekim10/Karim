@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TipScreen extends StatelessWidget {
-  const TipScreen({Key? key, required this.country, required this.category})
-      : super(key: key);
+  const TipScreen({Key? key, required this.randomTipText}) : super(key: key);
 
-  final String? country;
-  final String? category;
+  final String? randomTipText;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +21,7 @@ class TipScreen extends StatelessWidget {
               ),
             ),
             Text(
-              '$country $category',
+              '$randomTipText',
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 20,
