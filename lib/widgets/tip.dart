@@ -51,6 +51,26 @@ class Tip extends StatelessWidget {
                 ],
                 borderRadius: BorderRadius.circular(25),
               ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Tip!',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      '$SummaryTipText',
+                      style: const TextStyle(fontSize: 15),
+                    ),
+                  ),
+                ],
+              ),
             ),
           );
         } else if (snapshot.hasError) {
