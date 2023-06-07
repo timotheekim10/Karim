@@ -1,3 +1,15 @@
+<<<<<<< Updated upstream
 2023/06/06-20:12:25.839 11c Reusing MANIFEST C:\Users\Bieber\AppData\Local\Temp\flutter_tools.f4ff6891\flutter_tools_chrome_device.4905c1a\Default\Extension State/MANIFEST-000001
 2023/06/06-20:12:25.839 11c Recovering log #3
 2023/06/06-20:12:25.839 11c Reusing old log C:\Users\Bieber\AppData\Local\Temp\flutter_tools.f4ff6891\flutter_tools_chrome_device.4905c1a\Default\Extension State/000003.log 
+=======
+<<<<<<< HEAD
+2023/06/06-11:35:44.655 28fc Reusing MANIFEST C:\Users\Bieber\AppData\Local\Temp\flutter_tools.809c3794\flutter_tools_chrome_device.23b60698\Default\Extension State/MANIFEST-000001
+2023/06/06-11:35:44.656 28fc Recovering log #3
+2023/06/06-11:35:44.656 28fc Reusing old log C:\Users\Bieber\AppData\Local\Temp\flutter_tools.809c3794\flutter_tools_chrome_device.23b60698\Default\Extension State/000003.log 
+=======
+2023/06/06-15:11:48.291 10b8 Reusing MANIFEST C:\Users\Bieber\AppData\Local\Temp\flutter_tools.5ac458dd\flutter_tools_chrome_device.8d8c4f3f\Default\Extension State/MANIFEST-000001
+2023/06/06-15:11:48.291 10b8 Recovering log #3
+2023/06/06-15:11:48.291 10b8 Reusing old log C:\Users\Bieber\AppData\Local\Temp\flutter_tools.5ac458dd\flutter_tools_chrome_device.8d8c4f3f\Default\Extension State/000003.log 
+>>>>>>> master
+>>>>>>> Stashed changes

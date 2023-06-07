@@ -42,41 +42,64 @@ class _RecommendedAppDetailsState extends State<RecommendedAppDetails> {
                 ),
               ),
             ),
-            Positioned.fill(
-              child: Align(
-                alignment: Alignment.center,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      child: const Text(
-                        'Download',
-                        style: TextStyle(
-                          color: Colors.black,
+            Align(
+              alignment: Alignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/playstore.png',
+                              width: 24,
+                              height: 24,
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Download',
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
+                    ],
+                  ),
+                  const SizedBox(width: 50),
+                  TextButton(
+                    onPressed: () {
+                      _launchYouTubeSearch(widget.productName!);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
                     ),
-                    const SizedBox(height: 50),
-                    ElevatedButton(
-                      onPressed: () {
-                        _launchYouTubeSearch(widget.productName!); // 수정된 부분
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      child: const Text(
-                        'YouTube',
-                        style: TextStyle(
-                          color: Colors.black,
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/youtube.png',
+                          width: 24,
+                          height: 24,
                         ),
-                      ),
+                        const SizedBox(height: 8),
+                        const Text(
+                          'YouTube',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ],
