@@ -14,7 +14,12 @@ class SelectedButtonProvider extends ChangeNotifier {
 }
 
 class Scrollview extends StatefulWidget {
-  const Scrollview({Key? key}) : super(key: key);
+  final String? productName;
+
+  const Scrollview({
+    Key? key,
+    required this.productName,
+  }) : super(key: key);
 
   @override
   ScrollviewState createState() => ScrollviewState();

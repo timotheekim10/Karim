@@ -28,6 +28,20 @@ class _RecommendedAppDetailsState extends State<RecommendedAppDetails> {
     }
   }
 
+  void _launchPlayStore(String searchQuery) async {
+    String url =
+        'https://play.google.com/store/search?q=${Uri.encodeComponent(searchQuery)}';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Could not launch Play Store search.'),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +56,21 @@ class _RecommendedAppDetailsState extends State<RecommendedAppDetails> {
                 ),
               ),
             ),
+            Column(
+              children: [
+                const SizedBox(height: 300),
+                Center(
+                  child: Text(
+                    widget.productName!,
+                    style: const TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ],
+            ),
             Align(
               alignment: Alignment.center,
               child: Row(
@@ -51,7 +80,9 @@ class _RecommendedAppDetailsState extends State<RecommendedAppDetails> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          _launchPlayStore(widget.productName!);
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
                         ),
