@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		xo2Q3CYK1kgzbZ2OputLUppHcac=
+		JKKFvxtCEQHU8kB3Sib1nN+wlgc=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		uHlPE4ritHRGAowkrebOqrJEwfA=
+		09VKKcLVMdvKpQVsld9Sdfy3Y10=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		Tl+X96d8bsGlyYYCRZG3uGzH0Us=
+		9JhuzEGM4JtEhicjffJ7SWmie4M=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -92,6 +92,10 @@
 		<data>
 		lfNquSFKM3DX2cLy4PR+IOAsu1k=
 		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/playstore.png</key>
+		<data>
+		FPBXt9JyY1r++tMJ972eKarQTuM=
+		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/shopping.png</key>
 		<data>
 		rtsINpogYAWIQT0r2GrISHmlsqQ=
@@ -118,7 +122,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		5PTv53VpexKhDtK3t/FodBBBAto=
+		s1FLC2kucIoZ09f9qvWiCDhITBE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -146,7 +150,7 @@
 		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
-		BnQRx1gaia4VM+WhIgYOE5/O+Vo=
+		yWOsVynxKS5YMnA/pRBRnfc3LHg=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
@@ -170,7 +174,7 @@
 		</data>
 		<key>Frameworks/FirebaseFirestore.framework/FirebaseFirestore</key>
 		<data>
-		4P9Q/bF8F2I+FcX+/x5eQP56XC4=
+		X5JgQW8m+gyBbJAITrSZAlHhpIQ=
 		</data>
 		<key>Frameworks/FirebaseFirestore.framework/Info.plist</key>
 		<data>
@@ -465,7 +469,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/KUT9/5ur3J7a1U0PMDhO0fxUcuVcTOFZu9XkcpSiyw=
+			1hrUJX6geAbhLeOky6psCyhBKIdb3gSZBb5/A/MV5R0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -479,14 +483,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ADHJzI0jys0AQXuRNGJpeVy+9egs9QpijABcxE6s8xI=
+			obLasrCxZZSA6y638aL6KixIhnFClnQ0vkJMtVwQy+c=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IQjiRIsDOTauJCeeOtpFVCWvs0YdAnn4BxDfOMYvQJU=
+			/7uLZWRfEcPgTf/HWPNkiVrvlT5O2OXi1/dAMUvwsJM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -545,6 +549,13 @@
 			wJKO3seLknB0ZbWFSAttCy6Zsv9q/aXeupxadSYw2mA=
 			</data>
 		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/playstore.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MSx355DqojT4zVadEMPqm0lQSh6mX7x+XAOsBEIQjXM=
+			</data>
+		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/shopping.png</key>
 		<dict>
 			<key>hash2</key>
@@ -591,7 +602,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			id8FFi5ji7ywyXsxi25hL8yIaCMUlCsnE2i7RT4QeVw=
+			srV1vOZHpa0I4phIDsNXTi9LAI2uKpKeSHK3GeoCfus=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -640,7 +651,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PlG5tNznv5Wuh7IQ4zzEF+28484HNTY3ez/p1uoGCqI=
+			pOQ5S6xaceeaWDs59Wuj8+XboP94LFtu6GQkFDwsKfo=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
@@ -682,7 +693,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Oofu2hZ1KgrA01osQgsyiyVJ8wqPGSXpKOELCaIKLY=
+			LrQlPO2KvERcr1o0zWg1OgsYhKJsXPZhYDhVShKRvsc=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseFirestore.framework/Info.plist</key>

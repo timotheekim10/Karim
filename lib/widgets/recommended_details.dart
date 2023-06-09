@@ -75,29 +75,34 @@ class _RecommendedAppDetailsState extends State<RecommendedAppDetails> {
                     ],
                   ),
                   const SizedBox(width: 50),
-                  TextButton(
-                    onPressed: () {
-                      _launchYouTubeSearch(widget.productName!);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                    ),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/youtube.png',
-                          width: 24,
-                          height: 24,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          _launchYouTubeSearch(widget.productName!);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
                         ),
-                        const SizedBox(height: 8),
-                        const Text(
-                          'YouTube',
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/youtube.png',
+                              width: 24,
+                              height: 24,
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'YouTube',
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),
