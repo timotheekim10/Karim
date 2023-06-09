@@ -65,12 +65,10 @@ class RecommendedApps extends StatelessWidget {
                         Flexible(
                           flex: 4,
                           child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.blue,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            width: 80,
-                            height: 80,
+                            child:
+                                Image.asset('assets/images/${productName}.jpg'),
+                            width: 60,
+                            height: 60,
                           ),
                         ),
                         Flexible(
