@@ -1,4 +1,6 @@
 import 'dart:async';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,11 +16,11 @@ class SelectedButtonProvider extends ChangeNotifier {
 }
 
 class Scrollview extends StatefulWidget {
-  final String? productName;
+  final String? country;
 
   const Scrollview({
     Key? key,
-    required this.productName,
+    this.country,
   }) : super(key: key);
 
   @override
@@ -35,24 +37,8 @@ class ScrollviewState extends State<Scrollview> {
     "Game",
   ];
 
-  List<String> carouselImages = [
-    'assets/images/baemin.png',
-    'assets/images/baemin.png',
-  ];
-  List<String> carouselTitles = [
-    "BAEMIN",
-    "Title 3",
-    "Title 4",
-    "Title 5",
-    "Title 6",
-  ];
-  List<String> carouselSubTitles = [
-    "Korea's No. 1 delivery app!",
-    "Title 3",
-    "Title 4",
-    "Title 5",
-    "Title 6",
-  ];
+  List<String> carouselImages = [];
+  List<String> carouselTitles = [];
 
   late PageController _pageController;
   int _currentPage = 0;
@@ -63,6 +49,9 @@ class ScrollviewState extends State<Scrollview> {
     super.initState();
     _pageController = PageController(initialPage: _currentPage);
     _startTimer();
+
+    // 데이터 가져오기
+    _fetchCarouselData();
   }
 
   @override
@@ -91,6 +80,43 @@ class ScrollviewState extends State<Scrollview> {
         });
       }
     });
+  }
+
+  void _fetchCarouselData() async {
+    try {
+      final snapshot = await FirebaseFirestore.instance
+          .collection('Info')
+          .doc(widget.country)
+          .get();
+      final data = snapshot.data();
+
+      final selectedButtonProvider = Provider.of<SelectedButtonProvider>(
+          context,
+          listen: false); // SelectedButtonProvider 가져오기
+      final selectedButton = selectedButtonProvider.selectedButton;
+
+      if (data != null && data.containsKey(selectedButton)) {
+        final categoryData = data[selectedButton];
+        if (categoryData is List && categoryData.isNotEmpty) {
+          final String title1 = categoryData[0]['product_name'];
+          final String title2 = categoryData[1]['product_name'];
+          final String title3 = categoryData[2]['product_name'];
+          final String title4 = categoryData[3]['product_name'];
+          setState(() {
+            carouselTitles = [title1, title2, title3, title4];
+            carouselImages = [
+              'assets/images/$title1.jpg',
+              'assets/images/$title2.jpg',
+              'assets/images/$title3.jpg',
+              'assets/images/$title4.jpg',
+            ];
+          });
+        }
+      }
+    } catch (e) {
+      // Handle error
+      print('Error: $e');
+    }
   }
 
   @override
@@ -183,25 +209,13 @@ class ScrollviewState extends State<Scrollview> {
                       ),
                     ),
                     Positioned(
-                      bottom: 85,
+                      bottom: 70,
                       left: 120,
                       child: Text(
                         carouselTitles[index],
                         style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 65,
-                      left: 120,
-                      child: Text(
-                        carouselSubTitles[index],
-                        style: const TextStyle(
-                          color: Color(0xffA8A6A6),
-                          fontSize: 14,
-                          letterSpacing: 0,
                         ),
                       ),
                     ),

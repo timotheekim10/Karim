@@ -38,9 +38,7 @@ class _CountryPageState extends State<CountryPage> {
       ),
       body: Column(
         children: [
-          const Scrollview(
-            productName: '',
-          ),
+          Scrollview(country: widget.country),
           Tip(
             country: widget.country,
             category: selectedButton,
