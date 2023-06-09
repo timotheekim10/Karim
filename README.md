@@ -8,24 +8,24 @@
 
 
 ### Front-end
-
-| Category | Stack      |
-| -------- | ---------- |
-| Language |  Flutter  |
-| Infra    |  Firebase |
+<p>
+   <img src="https://img.shields.io/badge/Flutter-02569B.svg?style=for-the-badge&logo=Flutter&logoColor=white">
+  
+  
+</p>
 
 ### Back-end
 
-| Category  | Stack               |
-| --------- | ------------------- |
-| Database  |  Firestore         |
+<p>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28.svg?style=for-the-badge&logo=Firebase&logoColor=white">
+  </p>
 
 ### Communication
+<p>
+  <img src="https://img.shields.io/badge/Google Meet-00897B.svg?style=for-the-badge&logo=Google Meet&logoColor=white">
+  <img src="https://img.shields.io/badge/Notion-000000.svg?style=for-the-badge&logo=Notion&logoColor=white">
+  </p>
 
-| Category      | Stack       |
-| ------------- | ----------- |
-| Communication | google Meet |
-| Documents     | Notion      |
 
 ---
 
