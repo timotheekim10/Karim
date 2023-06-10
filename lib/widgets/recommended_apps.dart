@@ -64,11 +64,11 @@ class RecommendedApps extends StatelessWidget {
                       children: [
                         Flexible(
                           flex: 4,
-                          child: Container(
-                            child:
-                                Image.asset('assets/images/${productName}.jpg'),
+                          child: SizedBox(
                             width: 60,
                             height: 60,
+                            child:
+                                Image.asset('assets/images/${productName}.jpg'),
                           ),
                         ),
                         Flexible(

@@ -45,101 +45,132 @@ class _RecommendedAppDetailsState extends State<RecommendedAppDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Stack(
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/karim.png'),
-                ),
+      body: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage('assets/images/karim.png'),
               ),
             ),
-            Column(
-              children: [
-                const SizedBox(height: 300),
-                Center(
-                  child: Text(
-                    widget.productName!,
-                    style: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
+          ),
+          Stack(
+            children: [
+              Center(
+                child: Container(
+                  margin: const EdgeInsets.only(top: 230),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        widget.productName != null
+                            ? 'assets/images/${widget.productName}.jpg'
+                            : 'assets/images/default.jpg',
+                      ),
+                      const SizedBox(height: 10),
+                      Center(
+                        child: Text(
+                          widget.productName!,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ],
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextButton(
-                        onPressed: () {
-                          _launchPlayStore(widget.productName!);
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              'assets/images/playstore.png',
-                              width: 24,
-                              height: 24,
-                            ),
-                            const SizedBox(height: 8),
-                            const Text(
-                              'Download',
-                              style: TextStyle(
-                                color: Colors.black,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(width: 50),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextButton(
-                        onPressed: () {
-                          _launchYouTubeSearch(widget.productName!);
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              'assets/images/youtube.png',
-                              width: 24,
-                              height: 24,
-                            ),
-                            const SizedBox(height: 8),
-                            const Text(
-                              'YouTube',
-                              style: TextStyle(
-                                color: Colors.black,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+              ),
+            ],
+          ),
+          Positioned(
+            top: 350,
+            left: 115,
+            child: Container(
+              width: 200,
+              height: 250,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white.withOpacity(0.8),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.3),
+                    blurRadius: 5,
+                    offset: const Offset(0, 3),
                   ),
                 ],
               ),
             ),
-          ],
-        ),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        _launchPlayStore(widget.productName!);
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/playstore.png',
+                            width: 24,
+                            height: 24,
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'Download',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 30),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        _launchYouTubeSearch(widget.productName!);
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/youtube.png',
+                            width: 24,
+                            height: 24,
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'YouTube',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
