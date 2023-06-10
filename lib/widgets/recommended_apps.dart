@@ -68,7 +68,7 @@ class RecommendedApps extends StatelessWidget {
                             width: 60,
                             height: 60,
                             child:
-                                Image.asset('assets/images/${productName}.jpg'),
+                                Image.asset('assets/images/$productName.jpg'),
                           ),
                         ),
                         Flexible(
