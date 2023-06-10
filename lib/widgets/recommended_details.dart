@@ -143,7 +143,8 @@ class _RecommendedAppDetailsState extends State<RecommendedAppDetails> {
                   children: [
                     TextButton(
                       onPressed: () {
-                        _launchYouTubeSearch(widget.productName!);
+                        _launchYouTubeSearch(
+                            'How to use ${widget.productName!}');
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
